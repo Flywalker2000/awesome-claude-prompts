@@ -152,6 +152,7 @@ We hope you find these prompts useful and have fun using Claude!
 - [Simulate A Job Interview](#simulate-a-job-interview)
 - [Learn a new topic using AI](#learn-a-new-topic-using-ai)
 - [Use Claude to answer frequently asked questions](#use-claude-to-answer-frequently-asked-questions)
+- [Set-up Claude Code 3.7 Sonnet R .md→.xml] (#advanced-reasoning,structured-project-setup,optimization,change-CLAUDE.md-to-CLAUDE.xml)
 
 ## AI Resume（with Claude Artifacts)
 ![alt text](imgs/ai_resume.png)
@@ -2931,4 +2932,67 @@ Prompt 2: I don't know [topic]. Provide a list of sub-topics that I can choose f
 [describe the place you want help with]
 
 How do I make this possible? Give me simple step-by step instructions.
+```
+
+## Set-up Claude Code 3.7 Sonnet R .md→.xml
+```
+<prompt>
+  <project>{Project Name}</project>
+  <task>Create Project Structure</task>
+  <description>
+    You are Claude, an AI coding assistant. Your task is to create a basic project structure for a {Project Type}.
+  </description>
+  <instructions>
+    <step>Utilize your advanced reasoning and coding knowledge to complete this task.</step>
+    <step>If the user specifies a {Framework}, use it.</step>
+    <step>If no framework is specified, choose the most suitable framework for the {Project Type}.</step>
+    <step>For web applications, consider popular frameworks like React, Angular, or Vue.js.</step>
+    <step>For mobile applications, consider React Native, Flutter, or native Android/iOS development.</step>
+    <step>For backend services, consider Node.js with Express, Python with Django or Flask, or Ruby on Rails.</step>
+  </instructions>
+  <steps>
+    <step>
+      <action>Create a new folder named {Project Name}.</action>
+    </step>
+    <step>
+      <action>Within the {Project Name} folder, create the necessary folders and files for a basic project.</action>
+      <details>This should include all the default files and folders that are typically included in a new project of the chosen framework.</details>
+    </step>
+    <step>
+      <action>Create a file named CLAUDE.xml in the root of the {Project Name} folder.</action>
+    </step>
+    <step>
+      <action>In the CLAUDE.xml file:</action>
+      <details>
+        <item>Write a detailed explanation of the project structure. This should include:</item>
+        <subitem>A hierarchical list of all the folders and files created, with a brief description of each one.</subitem>
+        <subitem>Any important information about the chosen framework or project type that the user should be aware of.</subitem>
+        <subitem>Instructions on how to run the project.</subitem>
+        <item>Add the following instruction: "I will code this project in small steps and avoid trying to code the whole project at once. I will create a task list in this document outlining all the tasks that need to be completed, with priorities assigned to each task to guide the development process."</item>
+        <item>Include basic documentation for the project, such as a brief description of the project's purpose and how to use it.</item>
+      </details>
+    </step>
+    <step>
+      <action>Include common dependencies for the chosen framework in the package.json (or equivalent) file.</action>
+    </step>
+    <step>
+      <action>Initialize a Git repository in the project folder and make an initial commit with the message 'Initial project setup'.</action>
+    </step>
+    <step>
+      <action>Generate a simple 'Hello World' example in the main application file (if applicable).</action>
+    </step>
+  </steps>
+  <enhancements>
+    <item>Leverage System Prompts: Consider using system prompts to provide Claude with more context and instructions before the main prompt. This can lead to more accurate and relevant code generation.</item>
+    <item>Prompt Formats: XML is a more robust format for complex coding tasks. Consider experimenting with different formats to see which yields the best results.</item>
+    <item>Iterative Prompt Refinement: Use tools like the Claude prompt generator or LangGPT to refine and improve the prompt based on Claude's responses and it's project specific needs.</item>
+  </enhancements>
+  <conclusion>
+    Awaiting Instructions
+    I have completed the basic project setup for {Project Name}. The project structure is documented in the CLAUDE.xml file. Please review it and let me know what you would like me to do next. I'm ready for your instructions!
+  </conclusion>
+  <note>
+    This refined prompt incorporates best practices and learnings from the "Awesome Claude Prompts" repository and other resources, leading to a more efficient and user-friendly project setup process.
+  </note>
+</prompt>
 ```
