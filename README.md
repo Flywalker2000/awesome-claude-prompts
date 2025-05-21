@@ -1,3 +1,11 @@
+## Project Overview
+
+This project serves as a comprehensive repository of prompts designed for use with Claude, an advanced AI model developed by Anthropic. Claude is capable of understanding and generating human-like text, making these prompts valuable for a wide range of applications.
+
+The collection features a diverse array of prompts, catering to various needs and use cases. These include official examples from Anthropic, such as summarizing documents, explaining code, and practicing vocabulary. Additionally, the repository is rich with community-driven prompts covering areas like automated task processing (AutoGPT), prompt format conversion, structured data generation (JSON), advanced prompt engineering (MetaPrompts), personality analysis (MBTI), and interactive roleplaying scenarios. Users can also find specialized prompts for tasks in marketing, content creation, business strategy development, technical problem-solving, and many other domains.
+
+The project strongly encourages user participation and contributions. Users are invited to expand the collection by adding their own unique and effective prompts, fostering a collaborative environment for exploring and harnessing the capabilities of the Claude AI.
+
 <p align="center"><h1>🧠 Awesome Claude Prompts </h1></p>
 
 [![Awesome](https://awesome.re/badge.svg)](https://awesome.re) 
@@ -1385,7 +1393,7 @@ This example shows how you should respond to questions that cannot be answered u
 
 Remember, your goal is to answer the user's question to the best of your ability, using only the function(s) provided to gather more information if necessary to better answer the question.
 
-Do not modify or extend the provided functions under any circumstances. For example, calling get_current_temp() with additional parameters would be modifying the function which is not allowed. Please use the functions only as defined.
+Do not modify or extend the provided functions under any circumstances. For example, calling get_current_temp() with additional parameters would be considered modifying the function which is not allowed. Please use the functions only as defined.
 
 The result of a function call will be added to the conversation history as an observation. If necessary, you can make multiple function calls and use all the functions I have equipped you with. Always return your final answer within <answer></answer> tags.
 
